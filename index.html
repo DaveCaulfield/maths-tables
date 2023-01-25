@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Courgette&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div id="sum-paragraph">
+            <span id="num1-el">0</span>
+            <span id="sum-type">-</span>
+            <span id="num2-el">0</span>
+            <span>=</span>
+            <span id="sum-answer">0</span>
+
+        </div>
+
+        <div class="buttons-div">
+            <div class="buttons-div2">
+                <button class=" increment-btn" onclick="incrementNum1()">🔼</button>
+                <button class="decrement-btn" onclick="decrementNum1()">🔽</button>
+            </div>
+            <div class="buttons-div2">
+                <button id="add-btn" onclick="sumTypeAddition()">➕</button>
+                <button id="subtract-btn" onclick="sumTypeSubtract()">➖</button>
+            </div>
+
+            <div class="buttons-div2">
+                <button class="increment-btn" onclick="incrementNum2()">🔼</button>
+                <button class="decrement-btn" onclick="decrementNum2()">🔽</button>
+            </div>
+
+            <div class="buttons-div2">
+                <button id="answer-btn" onclick="doMath()">Answer</button>
+                <button id="reset-btn" onclick="location.reload()">Reset</button>
+            </div>
+
+        </div>
+
+        <input type="number" id="answer-input">
+        <button id="check-btn" onclick="checkAnswer()">Check</button>
+
+        <div id="check-answer-div">
+            <p id="check-answer-paragraph"></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div> <!-- end container -->
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
