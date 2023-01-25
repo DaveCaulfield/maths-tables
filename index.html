@@ -40,18 +40,28 @@
             </div>
 
             <div class="buttons-div2">
-                <button id="answer-btn" onclick="doMath()">Answer</button>
+
                 <button id="reset-btn" onclick="location.reload()">Reset</button>
+                <button id="answer-btn" onclick="doMath()">Answer</button>
             </div>
 
         </div>
 
-        <input type="number" id="answer-input">
-        <button id="check-btn" onclick="checkAnswer()">Check</button>
 
-        <div id="check-answer-div">
+        <span id="check-answer-emoji"></span>
+
+
+        <span>👉<input type="number" id="answer-input">👈</span>
+
+
+        <div class="check-answer-div">
             <p id="check-answer-paragraph"></p>
         </div>
+
+        <button id="check-btn" onclick="checkAnswer()">Check</button>
+
+
+
 
 
 

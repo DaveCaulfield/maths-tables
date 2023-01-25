@@ -9,6 +9,7 @@ let sumType = document.getElementById("sum-type")
 let checkResult = document.getElementById("sum-answer");
 let answerInput = document.getElementById("answer-input");
 let answerCheck = document.getElementById("check-answer-paragraph");
+let answerEmoji = document.getElementById("check-answer-emoji");
 
 
 
@@ -16,42 +17,63 @@ function incrementNum1() {
     num1 += 1
     numEl1.textContent = num1;
     checkResult.textContent = "?";
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
+
 }
 
 function decrementNum1() {
     num1 -= 1
     numEl1.textContent = num1;
     checkResult.textContent = "?";
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
 
 function incrementNum2() {
     num2 += 1
     numEl2.textContent = num2;
     checkResult.textContent = "?";
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
 
 function decrementNum2() {
     num2 -= 1
     numEl2.textContent = num2;
     checkResult.textContent = "?";
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
 
 function sumTypeAddition() {
     sumType.textContent = "+"
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
 
 function sumTypeSubtract() {
     sumType.textContent = "-"
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
 
 function subtract() {
     let result = num1 - num2;
     checkResult.textContent = result;
+    clearInput();
 };
 
 function add() {
     let result = num1 + num2;
     checkResult.textContent = result;
+    clearInput();
 };
 
 
@@ -63,14 +85,10 @@ function doMath() {
         sumAnswer = num1 - num2;
         checkResult.textContent = sumAnswer;
     }
+    answerCheck.textContent = "";
+    answerEmoji.textContent = "";
+    clearInput();
 }
-
-// function reset() {
-//     numEl1.textContent = 0;
-//     numEl2.textContent = 0;
-//     checkResult.textContent = "?";
-// }
-
 
 function checkAnswer() {
     let output1 = answerInput.value;
@@ -86,11 +104,21 @@ function checkAnswer() {
 
 
     if (output1 == output2) {
-        answerCheck.textContent = "You're Right! 😃";
+        answerEmoji.textContent = "😃";
+        answerCheck.textContent = "You're Right  " + num1 + sumType.textContent + num2 + "=" + sumAnswer;
+        checkResult.textContent = sumAnswer;
     } else {
-        answerCheck.textContent = "Wrong Answer 😩 ..Try Again";
+        answerEmoji.textContent = "😩";
+        answerCheck.textContent = "Wrong Answer ..Keep Trying!";
+        checkResult.textContent = "?";
 
     }
-
 }
-// answerInput.value
+
+
+function clearInput() {
+    var getValue = document.getElementById("answer-input");
+    if (getValue.value != "") {
+        getValue.value = "";
+    }
+}

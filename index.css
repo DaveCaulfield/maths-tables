@@ -8,10 +8,10 @@ body {
 }
 
 .container {
-    background: #211F1F;
+    /* background: #211F1F; */
     margin: 10px auto;
-    border: 3px solid gray;
-    border-radius: 10px;
+    /* border: 3px solid gray;
+    border-radius: 10px; */
     width: 80vw;
     /* max-width: 800px; */
     height: 100vh;
@@ -43,11 +43,13 @@ button {
     background: skyblue;
 }
 
+
+
 #sum-paragraph {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: bold;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .buttons-div {
@@ -69,7 +71,8 @@ button {
 }
 
 #answer-btn {
-    background: #58e13c;
+    /* background: #58e13c; */
+    background: gray;
 }
 
 #reset-btn {
@@ -78,6 +81,12 @@ button {
 
 #answer-input {
     margin-top: 20px;
+    width: 200px;
+    height: 70px;
+    color: plum;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #check-btn {
@@ -89,12 +98,26 @@ button {
     font-size: 2rem;
 }
 
+button:hover,
+#check-btn:hover,
+#answer-btn:hover,
+#reset-btn:hover,
+#add-btn:hover,
+#subtract-btn:hover {
+    background: plum;
+}
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .container {
         height: 80vh;
         padding: 2%;
         margin-top: 40px;
+        font-size: 3rem;
     }
+
+    #sum-paragraph {
+        font-size: 8rem;
+    }
+
 }
