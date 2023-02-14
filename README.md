@@ -1,4 +1,4 @@
-A Maths tables site buit for my daughter -  built with basic javascript. 
+A Maths tables site built for my daughter -  built with basic javascript. 
 
 note, this is not a mobile responsive site
 
